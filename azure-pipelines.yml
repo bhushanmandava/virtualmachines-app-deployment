@@ -1,20 +1,33 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
-# pool:
-#   vmImage: windows-latest
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+parameters:
+- name: locationStage1
+  type: string
+  default: './path/to/default/location1'
+  displayName: 'Location for Stage 1'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- name: locationStage2
+  type: string
+  default: './path/to/default/location2'
+  displayName: 'Location for Stage 2'
+
+stages:
+- stage: Stage1
+  jobs:
+  - job: Job1
+    steps:
+    - script: |
+        echo "Using location: ${{ parameters.locationStage1 }}"
+        # Add more steps that use this location
+      displayName: 'Use Location for Stage 1, Job 1'
+
+- stage: Stage2
+  dependsOn: Stage1
+  jobs:
+  - job: Job2
+    steps:
+    - script: |
+        echo "Using location: ${{ parameters.locationStage2 }}"
+        # Add more steps that use this location
+      displayName: 'Use Location for Stage 2, Job 2'
