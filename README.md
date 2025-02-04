@@ -1,6 +1,9 @@
+You can find the README file for the repository [here](https://github.com/bhushanmandava/virtualmachines-app-deployment/blob/c37a8f400eb6ba1a3ec743badfa80b069a731002/README.md). 
+
+Here's the content of the README file:
+
 # virtualmachines-app-deployment
 Review AZ VM's and deploy applications
-# Read It
 
 ## Description
 Read It is an open-source .NET project for a book application, deployed using Azure Cloud. This project was created as a learning tool to understand cloud computing with Azure.
@@ -72,5 +75,4 @@ Contributions are welcome! Please follow these steps to contribute:
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
-For any questions or feedback, please contact me at [your-email@example.com].
-
+For any questions or feedback, please contact me at [bhushanmandava16@gmail.com].
