@@ -1,4 +1,3 @@
-Here is the updated README file content with the correct repository link:
 
 # virtualmachines-app-deployment
 Review AZ VM's and deploy applications
@@ -72,5 +71,4 @@ Contributions are welcome! Please follow these steps to contribute:
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Contact
-For any questions or feedback, please contact me at your-email@example.com.
+
